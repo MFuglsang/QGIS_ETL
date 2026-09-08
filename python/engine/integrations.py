@@ -7,7 +7,6 @@ from qgis.analysis import QgsNativeAlgorithms
 from qgis.core import QgsCoordinateReferenceSystem, QgsVectorLayer, QgsVectorFileWriter, QgsProject, QgsFeatureRequest, QgsProcessingContext
 from qgis import processing
 from random import randrange
-import geopandas as gpd
 from core.misc import script_failed
 import time
 
@@ -35,6 +34,7 @@ class Integrations:
         """
 
         logger.info(f'Creating Geopandas dataframe from layer  {str(layer)}')
+        import geopandas as gpd
         config = get_config()
         try:
             tmp_path = create_tempfile(layer, 'to_dataframe')

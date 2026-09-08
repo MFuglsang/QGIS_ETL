@@ -7,10 +7,6 @@ from qgis.core import QgsVectorFileWriter, QgsVectorLayerExporter, QgsProject, Q
 from core.misc import script_failed, create_tempfile, delete_tempfile
 
 import processing
-from processing.core.Processing import Processing
-from processing.script.ScriptUtils import *
-from qgis.analysis import QgsNativeAlgorithms
-Processing.initialize()
 
 class Output_Writer:
 
